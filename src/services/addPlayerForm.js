@@ -80,19 +80,19 @@ function AddPlayerForm(props) {
                   <div class="col">
                     <div class="row">
                       <div class="col">
-                        <CuartosComponent />
+                        <CuartosComponent teams={teams}/>
                       </div>
                       <div class="w-100"></div>
 
                       <div class="col">
-                        <SemisComponent />
+                        <SemisComponent teams={teams}/>
                       </div>
                     </div>
                   </div>
 
                   <div class="w-100"></div>
                   <div class="col">
-                    <FinalComponent />
+                    <FinalComponent teams={teams}/>
                   </div>
                 </div>
               </div>
