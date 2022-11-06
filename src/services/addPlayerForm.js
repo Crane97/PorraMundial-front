@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Emoji, EmojiStyle } from "emoji-picker-react";
 import "../styles/addPlayerForm.css";
 import Grupos from "../services/rounds/groupPhaseForm";
@@ -6,6 +6,31 @@ import Octavos from "../services/rounds/octavosForm";
 import CuartosComponent from "./rounds/cuartosForm";
 
 function AddPlayerForm(props) {
+
+  const [teams, setTeams] = useState([]);
+
+  let requestOptions = {
+    method: "GET",
+    redirect: "follow",
+  };
+
+  useEffect(() => {
+    fetch("http://localhost:8080/api/player/teams", requestOptions)
+      .then((response) => response.json())
+      .then((data) => {
+        let result = [];
+        console.log(data);
+
+        data.forEach((element) => {
+          result.push(element);
+        });
+
+        setTeams(result.map((team) => team.team).sort());
+      })
+
+      .catch((error) => console.log("error", error));
+  }, []);
+
   return (
     <div className="margins">
       <form>
@@ -48,10 +73,10 @@ function AddPlayerForm(props) {
               <div class="container">
                 <div class="row">
                   <div class="col">
-                    <Octavos />
+                    <Octavos teams={teams}/>
                   </div>
                   <div class="col">
-                    <CuartosComponent/>
+                    <CuartosComponent teams={teams}/>
                   </div>
                   <div class="col">Column</div>
                   <div class="w-100"></div>
