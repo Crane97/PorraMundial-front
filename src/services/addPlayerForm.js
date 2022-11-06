@@ -59,20 +59,27 @@ function AddPlayerForm(props) {
 
   const handleSubmit = () => {
 
-
-    let bets = [bet1, bet2, bet3, bet4, bet5, bet6, bet7, bet8, bet9, bet10,
+    let bets123 = [bet1, bet2, bet3, bet4, bet5, bet6, bet7, bet8, bet9, bet10,
       bet11, bet12, bet13, bet14, bet15, bet16, bet17, bet18, bet19, bet20,
       bet21, bet22, bet23, bet24, bet25, bet26, bet27, bet28, bet29, bet30, bet31];
 
-    setPlayerData({ name: playerData.name, username: playerData.username, email: playerData.email, bets: [bets] });
+      console.log(bets123);
+
+    setPlayerData({ name: playerData.name, username: playerData.username, email: playerData.email, bets: [...bets123] });
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
+    console.log(playerData);
+
+    var raw = JSON.stringify(playerData);
+
+    console.log(raw);
+
     let requestOptionsPost = {
       method: 'POST',
       headers: myHeaders,
-      body: playerData,
+      body: raw,
       redirect: 'follow'
     };
 
