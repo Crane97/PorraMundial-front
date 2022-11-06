@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HomeTable from "../services/homeTable";
 import { useState } from "react";
 
@@ -10,20 +10,22 @@ function Home(props) {
     redirect: "follow",
   };
 
+  useEffect(() => {
   fetch("http://localhost:8080/api/player/players", requestOptions)
     .then((response) => response.json())
     .then((data) => {
       let result = [];
+      console.log(data.content);
 
-      data.forEach((element) => {
+      data.content.forEach((element) => {
         result.push(element);
       });
 
       setPlayerResult(result);
-      console.log(playerResult);
     })
 
     .catch((error) => console.log("error", error));
+  },[])
 
   return (
     <div>

@@ -15,7 +15,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="*" element={<Home />} />
-          <Route path="/userData/:id" element={<AddPlayer />} />
+          <Route path="/nuevoJugador" element={<AddPlayer />} />
         </Routes>
       </BrowserRouter>
     </div>
