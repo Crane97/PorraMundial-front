@@ -4,6 +4,8 @@ import "../styles/addPlayerForm.css";
 import Grupos from "../services/rounds/groupPhaseForm";
 import Octavos from "../services/rounds/octavosForm";
 import CuartosComponent from "./rounds/cuartosForm";
+import SemisComponent from "./rounds/semifinalsForm";
+import FinalComponent from "./rounds/finalsForm";
 
 function AddPlayerForm(props) {
   return (
@@ -51,11 +53,22 @@ function AddPlayerForm(props) {
                     <Octavos />
                   </div>
                   <div class="col">
-                    <CuartosComponent/>
+                    <div class="row">
+                      <div class="col">
+                        <CuartosComponent />
+                      </div>
+                      <div class="w-100"></div>
+
+                      <div class="col">
+                        <SemisComponent />
+                      </div>
+                    </div>
                   </div>
-                  <div class="col">Column</div>
+
                   <div class="w-100"></div>
-                  <div class="col">Final</div>
+                  <div class="col">
+                    <FinalComponent />
+                  </div>
                 </div>
               </div>
             </div>
