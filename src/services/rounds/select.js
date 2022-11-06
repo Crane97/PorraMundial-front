@@ -10,6 +10,8 @@ function Select(props) {
   
     const handleSelectedTeam = (event) => {
         setGroup(event.target.value);
+        console.log("Al pavo ese lo veo cada semana con una diferente");
+        props.setBets({team: event.target.value, round: 16})
     };
 
     return (
