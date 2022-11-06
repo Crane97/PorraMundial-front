@@ -78,9 +78,6 @@ function AddPlayerForm(props) {
                     <Octavos teams={teams}/>
                   </div>
                   <div class="col">
-<<<<<<< HEAD
-                    <CuartosComponent teams={teams}/>
-=======
                     <div class="row">
                       <div class="col">
                         <CuartosComponent />
@@ -91,7 +88,6 @@ function AddPlayerForm(props) {
                         <SemisComponent />
                       </div>
                     </div>
->>>>>>> fb98259f57cb137e082ff376c52d9498744eeaf9
                   </div>
 
                   <div class="w-100"></div>
