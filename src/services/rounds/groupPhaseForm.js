@@ -83,43 +83,43 @@ function GroupPhaseForm(props) {
           <div class="row">
             <div class="col betBox">
               <div className="margins">
-                <GroupComponent />
+                <GroupComponent group="A" teams={["QATAR", "ECUADOR", "SENEGAL", "HOLANDA"]}/>
               </div>
             </div>
             <div class="col betBox">
               <div className="margins">
-                <GroupComponent />
+                <GroupComponent group="B" teams={["QATAR", "ECUADOR", "SENEGAL", "HOLANDA"]}/>
               </div>
             </div>
             <div class="col betBox">
               <div className="margins">
-                <GroupComponent />
+                <GroupComponent group="C" teams={["QATAR", "ECUADOR", "SENEGAL", "HOLANDA"]}/>
               </div>
             </div>
             <div class="col betBox">
               <div className="margins">
-                <GroupComponent />
+                <GroupComponent group="D" teams={["QATAR", "ECUADOR", "SENEGAL", "HOLANDA"]}/>
               </div>
             </div>
             <div class="w-100"></div>
             <div class="col betBox">
               <div className="margins">
-                <GroupComponent />
+                <GroupComponent group="E" teams={["QATAR", "ECUADOR", "SENEGAL", "HOLANDA"]}/>
               </div>
             </div>
             <div class="col betBox">
               <div className="margins">
-                <GroupComponent />
+                <GroupComponent group="F" teams={["QATAR", "ECUADOR", "SENEGAL", "HOLANDA"]}/>
               </div>
             </div>
             <div class="col betBox">
               <div className="margins">
-                <GroupComponent />
+                <GroupComponent group="G" teams={["QATAR", "ECUADOR", "SENEGAL", "HOLANDA"]}/>
               </div>
             </div>
             <div class="col betBox">
               <div className="margins">
-                <GroupComponent />
+                <GroupComponent group="H" teams={["QATAR", "ECUADOR", "SENEGAL", "HOLANDA"]}/>
               </div>
             </div>
           </div>
