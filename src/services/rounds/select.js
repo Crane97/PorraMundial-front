@@ -13,7 +13,7 @@ function Select(props) {
     };
 
     return (
-        <div>
+        <div className="margins">
             <label for={props.id}>{props.label}</label>
             <select
                 class="form-control"

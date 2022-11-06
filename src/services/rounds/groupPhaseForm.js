@@ -9,9 +9,6 @@ function GroupPhaseForm(props) {
 
   return (
     <div>
-      <div className="margins">
-        <h3> FASE DE GRUPOS </h3>
-      </div>
       <div>
         <div class="container">
           <div class="row">
@@ -55,26 +52,6 @@ function GroupPhaseForm(props) {
               <div className="margins">
                 <GroupComponent group="H" teams={["QATAR", "ECUADOR", "SENEGAL", "HOLANDA"]}/>
               </div>
-            </div>
-          </div>
-
-          <div className="margins">
-            <h3> FASE ELIMINATORIA </h3>
-          </div>
-          <div className="margins">
-            <h4> OCTAVOS DE FINAL </h4>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col betBox">
-                <div className="margins">
-                  <OctavosComponent teams = {""}/>
-                </div>
-              </div>
-              <div class="col betBox">Column</div>
-              <div class="col betBox">Column</div>
-              <div class="w-100"></div>
-              <div class="col betBox">Final</div>
             </div>
           </div>
         </div>

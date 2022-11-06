@@ -3,50 +3,9 @@ import { Emoji, EmojiStyle } from "emoji-picker-react";
 import "../styles/addPlayerForm.css";
 import Grupos from "../services/rounds/groupPhaseForm";
 import Octavos from "../services/rounds/octavosForm";
+import CuartosComponent from "./rounds/cuartosForm";
 
 function AddPlayerForm(props) {
-  
-  const [octavos1, setOctavos1] = useState("");
-
-  const handleSelectedOctavos1 = (event) => {
-    setOctavos1(event.target.value);
-  };
-
-  const [octavos2, setOctavos2] = useState("");
-
-  const handleSelectedOctavos2 = (event) => {
-    setOctavos2(event.target.value);
-  };
-  const [octavos3, setOctavos3] = useState("");
-
-  const handleSelectedOctavos3 = (event) => {
-    setOctavos3(event.target.value);
-  };
-  const [octavos4, setOctavos4] = useState("");
-
-  const handleSelectedOctavos4 = (event) => {
-    setOctavos4(event.target.value);
-  };
-  const [octavos5, setOctavos5] = useState("");
-
-  const handleSelectedOctavos5 = (event) => {
-    setOctavos5(event.target.value);
-  };
-  const [octavos6, setOctavos6] = useState("");
-
-  const handleSelectedOctavos6 = (event) => {
-    setOctavos6(event.target.value);
-  };
-  const [octavos7, setOctavos7] = useState("");
-  const handleSelectedOctavos7 = (event) => {
-    setOctavos7(event.target.value);
-  };
-  const [octavos8, setOctavos8] = useState("");
-
-  const handleSelectedOctavos8 = (event) => {
-    setOctavos8(event.target.value);
-  };
-
   return (
     <div className="margins">
       <form>
@@ -80,15 +39,25 @@ function AddPlayerForm(props) {
           </div>
           <div>
             <div class="container">
-              <Grupos/>
+              <Grupos />
 
               <div className="margins">
                 <h3> FASE ELIMINATORIA </h3>
               </div>
-              <div className="margins">
-                <h4> OCTAVOS DE FINAL </h4>
+
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <Octavos />
+                  </div>
+                  <div class="col">
+                    <CuartosComponent/>
+                  </div>
+                  <div class="col">Column</div>
+                  <div class="w-100"></div>
+                  <div class="col">Final</div>
+                </div>
               </div>
-              
             </div>
           </div>
         </div>
