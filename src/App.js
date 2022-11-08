@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './pages/home';
 import AddPlayer from './pages/addPlayer';
 import Navbar from './pages/navbar';
+import Bets from "./services/playerinfo/groupsBets";
+import PlayerBet from "./pages/playerBet";
 
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
         <Routes>
           <Route path="*" element={<Home />} />
           <Route path="/nuevoJugador" element={<AddPlayer />} />
+          <Route path="/jugador" element={<PlayerBet/>} />
         </Routes>
       </BrowserRouter>
     </div>
