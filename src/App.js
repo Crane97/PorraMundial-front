@@ -18,7 +18,7 @@ function App() {
         <Routes>
           <Route path="*" element={<Home />} />
           <Route path="/nuevoJugador" element={<AddPlayer />} />
-          <Route path="/jugador" element={<PlayerBet/>} />
+          <Route exact path="/jugador/:id" element={<PlayerBet/>} />
         </Routes>
       </BrowserRouter>
     </div>

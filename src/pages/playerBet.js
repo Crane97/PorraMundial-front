@@ -6,9 +6,17 @@ import OctavosBet from "../services/playerinfo/octavosBet";
 import CuartosBet from "../services/playerinfo/cuartosBet";
 import SemisBet from "../services/playerinfo/semisBet";
 import WinnerBet from "../services/playerinfo/winnerBet";
+import { useParams } from "react-router-dom";
 
 function PlayerBet(props) {
-  const [playerResult, setPlayerResult] = useState(new Array());
+  const [playerBet, setPlayerBet] = useState([]);
+  const [groupWinners, setGroupWinners] = useState([]);
+  const [octavosWinner, setOctavosWinner] = useState([]);
+  const [cuartosWinner, setCuartosWinner] = useState([]);
+  const [semisWinner, setSemisWinner] = useState([]);
+  const [finalWinner, setFinalWinner] = useState([]);
+
+  const {id} = useParams();
 
   var requestOptions = {
     method: "GET",
@@ -16,17 +24,18 @@ function PlayerBet(props) {
   };
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/player/players", requestOptions)
+    fetch("http://localhost:8080/api/player/roundDTO/" + id, requestOptions)
       .then((response) => response.json())
       .then((data) => {
-        let result = [];
-        console.log(data.content);
+        console.log("http://localhost:8080/api/player/roundDTO/" + id);
+        console.log(data);
 
-        data.content.forEach((element) => {
-          result.push(element);
-        });
-
-        setPlayerResult(result);
+        setPlayerBet(data[0].player);
+        setGroupWinners(data[0].teams);
+        setOctavosWinner(data[1]);
+        setCuartosWinner(data[2]);
+        setSemisWinner(data[3]);
+        setFinalWinner(data[4]);
       })
 
       .catch((error) => console.log("error", error));
@@ -35,34 +44,34 @@ function PlayerBet(props) {
   return (
     <div>
       <div class="container">
-        <h2> CRANEX </h2>
+        <h1> dam </h1>
         <br></br>
-        <h1> FASE DE GRUPOS </h1>
+        <h2> FASE DE GRUPOS </h2>
         <div class="row">
           <div class="col">
-            <Bets />
+            <Bets group = "A" groupWinners={groupWinners}/>
           </div>
           <div class="col">
-            <Bets />
+            <Bets group = "B" team1="ARGENTINA" team2="URUGUAY"/>
           </div>
           <div class="col">
-            <Bets />
+            <Bets group = "C" team1="QATAR" team2="ECUADOR"/>
           </div>
           <div class="col">
-            <Bets />
+            <Bets group = "D" team1="QATAR" team2="ECUADOR"/>
           </div>
           <div class="w-100"></div>
           <div class="col">
-            <Bets />
+            <Bets group = "E" team1="QATAR" team2="ECUADOR"/>
           </div>
           <div class="col">
-            <Bets />
+            <Bets group = "F" team1="QATAR" team2="ECUADOR"/>
           </div>
           <div class="col">
-            <Bets />
+            <Bets group = "G" team1="QATAR" team2="ECUADOR"/>
           </div>
           <div class="col">
-            <Bets />
+            <Bets group = "H" team1="QATAR" team2="ECUADOR"/>
           </div>
         </div>
         <div>
