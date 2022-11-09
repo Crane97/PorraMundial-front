@@ -3,6 +3,11 @@ import "../styles/homeTable.css";
 
 function HomeTable(props) {
 
+  function handleBetFromTable(id){
+    window.event.preventDefault();
+    console.log("La funcion corre")
+    window.location = "/jugador/" + id;
+  }
 
 
   return (
@@ -26,7 +31,7 @@ function HomeTable(props) {
               <td>{playerResult.username}</td>
               <td>{playerResult.accumulatedPoints}</td>
               <td>{playerResult.maxPoints}</td>
-              <td><button type="button">Apuesta</button></td>
+              <td><button type="button" onClick={() => handleBetFromTable(playerResult.id)}>Apuesta</button></td>
             </tr>
           ))}
         </tbody>

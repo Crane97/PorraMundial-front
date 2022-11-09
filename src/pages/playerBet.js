@@ -18,6 +18,8 @@ function PlayerBet(props) {
 
   const {id} = useParams();
 
+  let cont = 0;
+
   var requestOptions = {
     method: "GET",
     redirect: "follow",
@@ -32,10 +34,10 @@ function PlayerBet(props) {
 
         setPlayerBet(data[0].player);
         setGroupWinners(data[0].teams);
-        setOctavosWinner(data[1]);
-        setCuartosWinner(data[2]);
-        setSemisWinner(data[3]);
-        setFinalWinner(data[4]);
+        setOctavosWinner(data[1].teams);
+        setCuartosWinner(data[2].teams);
+        setSemisWinner(data[3].teams);
+        setFinalWinner(data[4].teams);
       })
 
       .catch((error) => console.log("error", error));
@@ -44,34 +46,34 @@ function PlayerBet(props) {
   return (
     <div>
       <div class="container">
-        <h1> dam </h1>
+        <h1> {playerBet.username} </h1>
         <br></br>
         <h2> FASE DE GRUPOS </h2>
         <div class="row">
           <div class="col">
-            <Bets group = "A" groupWinners={groupWinners}/>
+            <Bets group = "A" groupWinners={groupWinners} teamA={cont} teamB={cont+1}/>
           </div>
           <div class="col">
-            <Bets group = "B" team1="ARGENTINA" team2="URUGUAY"/>
+            <Bets group = "B" groupWinners={groupWinners} teamA={cont+2} teamB={cont+3}/>
           </div>
           <div class="col">
-            <Bets group = "C" team1="QATAR" team2="ECUADOR"/>
+            <Bets group = "C" groupWinners={groupWinners} teamA={cont+4} teamB={cont+5}/>
           </div>
           <div class="col">
-            <Bets group = "D" team1="QATAR" team2="ECUADOR"/>
+            <Bets group = "D" groupWinners={groupWinners} teamA={cont+6} teamB={cont+7}/>
           </div>
           <div class="w-100"></div>
           <div class="col">
-            <Bets group = "E" team1="QATAR" team2="ECUADOR"/>
+            <Bets group = "E" groupWinners={groupWinners} teamA={cont+8} teamB={cont+9}/>
           </div>
           <div class="col">
-            <Bets group = "F" team1="QATAR" team2="ECUADOR"/>
+            <Bets group = "F" groupWinners={groupWinners} teamA={cont+10} teamB={cont+11}/>
           </div>
           <div class="col">
-            <Bets group = "G" team1="QATAR" team2="ECUADOR"/>
+            <Bets group = "G" groupWinners={groupWinners} teamA={cont+12} teamB={cont+13}/>
           </div>
           <div class="col">
-            <Bets group = "H" team1="QATAR" team2="ECUADOR"/>
+            <Bets group = "H" groupWinners={groupWinners} teamA={cont+14} teamB={cont+15}/>
           </div>
         </div>
         <div>
@@ -82,24 +84,24 @@ function PlayerBet(props) {
               <div class="container">
                 <div class="row">
                   <div class="col">
-                    <OctavosBet/>
+                    <OctavosBet octavosWinner={octavosWinner}/>
                   </div>
                   <div class="col">
                     <div class="row">
                       <div class="col">
-                        <CuartosBet />
+                        <CuartosBet cuartosWinner={cuartosWinner}/>
                       </div>
                       <div class="w-100"></div>
 
                       <div class="col">
-                        <SemisBet />
+                        <SemisBet semisWinner={semisWinner}/>
                       </div>
                     </div>
                   </div>
 
                   <div class="w-100"></div>
                   <div class="col">
-                    <WinnerBet />
+                    <WinnerBet finalWinner={finalWinner}/>
                   </div>
                 </div>
               </div>
