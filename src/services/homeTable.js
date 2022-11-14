@@ -16,7 +16,6 @@ function HomeTable(props) {
         <thead class="thead-dark">
           <tr>
             <th scope="col">Identificador</th>
-            <th scope="col">Nombre</th>
             <th scope="col">Apodo</th>
             <th scope="col">Puntos actuales</th>
             <th scope="col">Maximo de puntos</th>
@@ -27,7 +26,6 @@ function HomeTable(props) {
           {props.players.map((playerResult) => (
             <tr>
               <th scope="row">{playerResult.id}</th>
-              <td>{playerResult.name}</td>
               <td>{playerResult.username}</td>
               <td>{playerResult.accumulatedPoints}</td>
               <td>{playerResult.maxPoints}</td>

@@ -15,6 +15,7 @@ function FinalComponent(props) {
             label={"GANADOR"}
             teams={props.teams}
             setBets={props.setBets}
+            setRound={1}
           />
         </div>
       </div>

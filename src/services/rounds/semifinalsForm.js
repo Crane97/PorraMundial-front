@@ -15,12 +15,14 @@ function SemisComponent(props) {
             label={"Semifinal ganador 1"}
             teams={props.teams}
             setBets={props.setBets[0]}
+            setRound={2}
           />
           <Select
             id={"Semifinal ganador 2"}
             label={"Semifinal ganador 2"}
             teams={props.teams}
             setBets={props.setBets[1]}
+            setRound={2}
           />
         </div>
       </div>
