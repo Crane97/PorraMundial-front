@@ -192,7 +192,7 @@ function AddPlayerForm(props) {
             </div>
           </div>
         </div>
-        <button type="button" onClick={handleSubmit} class="btn btn-primary btn-lg btn-block">Block level button</button>
+        <button type="button" onClick={handleSubmit} class="btn btn-primary btn-lg btn-block">Enviar apuesta</button>
       </form>
     </div>
   );
