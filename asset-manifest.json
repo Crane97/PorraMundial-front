@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.922b17a0.css",
-    "main.js": "/static/js/main.b9fa4291.js",
-    "static/js/787.66561b7c.chunk.js": "/static/js/787.66561b7c.chunk.js",
-    "index.html": "/index.html",
-    "main.922b17a0.css.map": "/static/css/main.922b17a0.css.map",
-    "main.b9fa4291.js.map": "/static/js/main.b9fa4291.js.map",
-    "787.66561b7c.chunk.js.map": "/static/js/787.66561b7c.chunk.js.map"
+    "main.css": "/PorraMundial-front/static/css/main.922b17a0.css",
+    "main.js": "/PorraMundial-front/static/js/main.1de96d78.js",
+    "static/js/787.66561b7c.chunk.js": "/PorraMundial-front/static/js/787.66561b7c.chunk.js",
+    "index.html": "/PorraMundial-front/index.html",
+    "main.922b17a0.css.map": "/PorraMundial-front/static/css/main.922b17a0.css.map",
+    "main.1de96d78.js.map": "/PorraMundial-front/static/js/main.1de96d78.js.map",
+    "787.66561b7c.chunk.js.map": "/PorraMundial-front/static/js/787.66561b7c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.922b17a0.css",
-    "static/js/main.b9fa4291.js"
+    "static/js/main.1de96d78.js"
   ]
 }
