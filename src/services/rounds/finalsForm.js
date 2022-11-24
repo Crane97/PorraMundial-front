@@ -14,7 +14,7 @@ function FinalComponent(props) {
             id={"GANADOR"}
             label={"GANADOR"}
             teams={props.teams}
-            setBets={props.setBets}
+            bets={props.bets} setBets={props.setBets}
             setRound={1}
           />
         </div>
