@@ -26,10 +26,10 @@ function PlayerBet(props) {
   };
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/player/roundDTO/" + id, requestOptions)
+    fetch("https://porramundial-368511.nw.r.appspot.com/api/player/roundDTO/" + id, requestOptions)
       .then((response) => response.json())
       .then((data) => {
-        console.log("http://localhost:8080/api/player/roundDTO/" + id);
+        console.log("https://porramundial-368511.nw.r.appspot.com/api/player/roundDTO/" + id);
         console.log(data);
 
         setPlayerBet(data[0].player);

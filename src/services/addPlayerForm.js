@@ -83,7 +83,7 @@ function AddPlayerForm(props) {
       redirect: 'follow'
     };
 
-    fetch("http://localhost:8080/api/player/addPlayer", requestOptionsPost)
+    fetch("https://porramundial-368511.nw.r.appspot.com/api/player/addPlayer", requestOptionsPost)
       .then(response => response.json())
       .then(result => console.log(result))
       .catch(error => console.log('error', error));
@@ -107,7 +107,7 @@ function AddPlayerForm(props) {
   };
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/player/teams", requestOptions)
+    fetch("https://porramundial-368511.nw.r.appspot.com/api/player/teams", requestOptions)
       .then((response) => response.json())
       .then((data) => {
         let result = [];

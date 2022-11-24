@@ -11,7 +11,7 @@ function Home(props) {
   };
 
   useEffect(() => {
-  fetch("http://localhost:8080/api/player/players", requestOptions)
+  fetch("https://porramundial-368511.nw.r.appspot.com/api/player/players", requestOptions)
     .then((response) => response.json())
     .then((data) => {
       let result = [];
