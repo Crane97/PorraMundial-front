@@ -16,7 +16,7 @@ function PlayerBet(props) {
   const [semisWinner, setSemisWinner] = useState([]);
   const [finalWinner, setFinalWinner] = useState([]);
 
-  const {id} = useParams();
+  // const {id} = useParams();
 
   let cont = 0;
 
@@ -26,10 +26,10 @@ function PlayerBet(props) {
   };
 
   useEffect(() => {
-    fetch("https://porramundial-368511.nw.r.appspot.com/api/player/roundDTO/" + id, requestOptions)
+    fetch("https://porramundial-368511.nw.r.appspot.com/api/player/roundDTO/" + props.id, requestOptions)
       .then((response) => response.json())
       .then((data) => {
-        console.log("https://porramundial-368511.nw.r.appspot.com/api/player/roundDTO/" + id);
+        console.log("https://porramundial-368511.nw.r.appspot.com/api/player/roundDTO/" + props.id);
         console.log(data);
 
         setPlayerBet(data[0].player);
@@ -41,7 +41,7 @@ function PlayerBet(props) {
       })
 
       .catch((error) => console.log("error", error));
-  }, []);
+  }, [props.id]);
 
   return (
     <div>

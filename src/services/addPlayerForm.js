@@ -39,15 +39,15 @@ function AddPlayerForm(props) {
   }
 
   const handleInputName = (event) => {
-    setPlayerData({ name: event.target.value, username: playerData.username, email: playerData.email, bets: playerData.bets });
+    setPlayerData({ name: event.target.value, username: playerData.username, email: playerData.email, bets: bets });
   };
 
   const handleInputUsername = (event) => {
-    setPlayerData({ name: playerData.name, username: event.target.value, email: playerData.email, bets: playerData.bets });
+    setPlayerData({ name: playerData.name, username: event.target.value, email: playerData.email, bets: bets });
   };
 
   const handleInputEmail = (event) => {
-    setPlayerData({ name: playerData.name, username: playerData.username, email: event.target.value, bets: playerData.bets });
+    setPlayerData({ name: playerData.name, username: playerData.username, email: event.target.value, bets: bets });
   };
 
   let requestOptions = {
@@ -141,7 +141,7 @@ function AddPlayerForm(props) {
             </div>
           </div>
         </div>
-        <button type="button" onClick={handleSubmit} class="btn btn-primary btn-lg btn-block">Enviar apuesta</button>
+        <button type="button" onClick={handleSubmit} class="btn btn-primary btn-lg btn-block" data-bs-dismiss="modal">Enviar apuesta</button>
       </form>
     </div>
   );
