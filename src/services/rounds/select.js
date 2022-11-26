@@ -7,11 +7,16 @@ function treatName(name) {
 function Select(props) {
     
     const [group, setGroup] = useState("");
-  
+    const [lastSelected, setLastSelected] = useState();
+
     const handleSelectedTeam = (event) => {
-        setGroup(event.target.value);
         console.log("Al pavo ese lo veo cada semana con una diferente");
-        props.setBets({team: event.target.value, round: props.setRound})
+        setGroup(event.target.value);
+        props.setBets(props.bets.filter(bet => bet !== lastSelected));
+        let newBet = {team: event.target.value, round: props.setRound}
+        setLastSelected(newBet);
+        props.setBets(prevBets => [...prevBets, newBet])
+        console.log(props.bets)
     };
 
     return (

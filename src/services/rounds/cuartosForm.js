@@ -14,28 +14,28 @@ function CuartosComponent(props) {
             id={"Cuartos ganador 1"}
             label={"Cuartos ganador 1"}
             teams={props.teams}
-            setBets={props.setBets[0]}
+            bets={props.bets} setBets={props.setBets}
             setRound={4}
           />
           <Select
             id={"Cuartos ganador 2"}
             label={"Cuartos ganador 2"}
             teams={props.teams}
-            setBets={props.setBets[1]}
+            bets={props.bets} setBets={props.setBets}
             setRound={4}
           />
           <Select
             id={"Cuartos ganador 3"}
             label={"Cuartos ganador 3"}
             teams={props.teams}
-            setBets={props.setBets[2]}
+            bets={props.bets} setBets={props.setBets}
             setRound={4}
           />
           <Select
             id={"Cuartos ganador 4"}
             label={"Cuartos ganador 4"}
             teams={props.teams}
-            setBets={props.setBets[3]}
+            bets={props.bets} setBets={props.setBets}
             setRound={4}
           />
         </div>
