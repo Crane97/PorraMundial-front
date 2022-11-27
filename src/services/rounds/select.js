@@ -10,13 +10,11 @@ function Select(props) {
     const [lastSelected, setLastSelected] = useState();
 
     const handleSelectedTeam = (event) => {
-        console.log("Al pavo ese lo veo cada semana con una diferente");
         setGroup(event.target.value);
         props.setBets(props.bets.filter(bet => bet !== lastSelected));
         let newBet = {team: event.target.value, round: props.setRound}
         setLastSelected(newBet);
         props.setBets(prevBets => [...prevBets, newBet])
-        console.log(props.bets)
     };
 
     return (
