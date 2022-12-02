@@ -29,8 +29,6 @@ function PlayerBet(props) {
     fetch("https://porramundial-368511.nw.r.appspot.com/api/player/roundDTO/" + props.id, requestOptions)
       .then((response) => response.json())
       .then((data) => {
-        console.log("https://porramundial-368511.nw.r.appspot.com/api/player/roundDTO/" + props.id);
-        console.log(data);
 
         setPlayerBet(data[0].player);
         setGroupWinners(data[0].teams);

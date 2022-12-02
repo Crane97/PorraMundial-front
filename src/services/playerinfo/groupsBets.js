@@ -5,8 +5,6 @@ function Bets(props) {
     return name.replace("_", " ");
   }
 
-  console.log(props.groupWinners[0] && props.groupWinners[0].team);
-
   return (
     <div>
       <div class="card betBox">

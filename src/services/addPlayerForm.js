@@ -19,8 +19,6 @@ function AddPlayerForm(props) {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
-    console.log(playerData);
-
     var raw = JSON.stringify(playerData);
 
     console.log(raw);
@@ -60,7 +58,6 @@ function AddPlayerForm(props) {
       .then((response) => response.json())
       .then((data) => {
         let result = [];
-        console.log(data);
 
         data.forEach((element) => {
           result.push(element);

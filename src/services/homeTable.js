@@ -8,7 +8,6 @@ function HomeTable(props) {
 
   function handleBetFromTable(id) {
     window.event.preventDefault();
-    console.log("La funcion corre")
     setCurrentId(id);
     // return (
     //   <div>

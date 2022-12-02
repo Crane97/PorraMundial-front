@@ -15,7 +15,6 @@ function Home(props) {
     .then((response) => response.json())
     .then((data) => {
       let result = [];
-      console.log(data.content);
 
       data.content.forEach((element) => {
         result.push(element);
